@@ -45,6 +45,13 @@ app.post("/add-volunteer",async (req,res) =>{
 })
 
 
+
+app.post("/view-volunteers",async(req,res)=>{
+    const volunteers=await nss.find()
+    res.json(volunteers)
+})
+
+
 app.listen(3000, () => {
     console.log("Server started")
 })
